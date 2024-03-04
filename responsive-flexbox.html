@@ -1,0 +1,294 @@
+  <!--https://www.w3schools.com/css/css3_flexbox_responsive.asp-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flexbox Responsive</title>
+      <!--example of Internal CSS located in the head section-->
+<style>
+
+/*
+
+The border you are seeing is the html default browser margin. It's a good practice to reset all margin and padding elements */
+
+
+* {
+  box-sizing: border-box;
+  margin: 0; /* Remove body margins */
+  scroll-behavior: smooth;
+
+}
+
+
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: -3px;
+  margin-left: 2%;
+  padding-top: 4%;
+  margin-bottom: 1%;
+  width: 90vw;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  width: 80vw;
+}
+
+p {
+  margin-top:2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+/* unvisited link */
+a:link {
+  color: darkblue;
+}
+
+a.footer:link {
+  color: pink;
+}
+
+/* visited link */
+a:visited {
+  color: darkblue;
+}
+
+/* mouse over link */
+a:hover {
+  color: yellow;
+  background-color: darkblue;
+  transition: 0.5s;
+  padding: 1px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: left;
+}
+
+.flex-item-1 {
+  background-color: lightblue;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-2 {
+  background-color: lightseagreen;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-3 {
+  background-color: lightpink;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-4 {
+  background-color: lightgoldenrodyellow;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-5 {
+  background-color: lightblue;
+  padding: 10px;
+  flex: 70%;
+
+}
+
+.flex-item-6 {
+  background-color: lightseagreen;
+  padding: 10px;
+  flex: 30%;
+}
+
+
+/* 
+here's a million ways to center an image within a div: https://www.freecodecamp.org/news/how-to-center-an-image-in-a-div-css/
+
+*/
+.sub-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-div a:link, .navigation-div a:visited {
+    color:hotpink;
+} 
+
+ol {
+
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+
+}
+
+
+footer {
+
+  color: white;
+  background-color: black;
+  height: 20%;
+  width: 100%;
+
+}
+
+
+  div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  background-color: yellow;
+  padding: 10px;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+blockquote {
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-1, .flex-item-2, .flex-item-3, .flex-item-4 {
+    flex: 100%;
+  }
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-left: 4%;
+  margin-bottom: 3%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-left: 4%;
+  margin-bottom: 4%;
+  width: 80vw;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-top:2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>CSS Responsive Flexbox</h1>
+
+<h2>In this example, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Flexbox↗</a> uses percentages of flex to create different layouts for different screen sizes.</h2>
+<h2><i>Resize the browser window</i> to see that the direction changes when the 
+screen size is 800px wide or smaller. Did you know the default paragraph font size is <a href="http://pxtoem.com/">16px which is 12pt?</a> Notice how the width of these headings are defined with a 70-80vw (viewport width), a <a href="https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/" target="_blank">relative unit.</a></h2>
+
+<nav>
+<div class="sticky">
+<ol>
+    <a href="#section-1">1. Flex Image Left</a>
+    <a href="#section-2">2. Flex Image Center</a>
+    <a href="">3. Flex Image 3-Up</a>
+    <a href="">4.</a>
+    <a href="">5.</a>
+    <a href="">6.</a>
+    <a href="">7.</a>
+</ol>
+</div>
+</nav>
+</header>
+
+<div class="flex-container" id="section-1">
+  <div class="flex-item-1"><p><b>1. Text and image are left-aligned.</b> In this example, we change the percentage of flex to create different layouts for different screen sizes.</p>
+  <img src="images/taupe.gif">
+  </div>
+
+  <div class="flex-item-2" id="section-2"><p><b>2. Text Left / Image Center.</b> In this example, the image is centered within a sub-container (div) inside a div.</p>
+  <div class="sub-container"><img src="images/wwolfy.gif" width="50%"></div>
+  </div>
+</div>
+
+<div class="flex-container">
+  <div class="flex-item-3"><p><b>3. Text with Images 3-Up.</b> In this example, we change the percentage of flex to create different layouts for different screen sizes.</p>
+  <img src="images/sec1_rubegoldberg.jpeg" width="32%">
+    <img src="images/sec1_rubegoldberg.jpeg" width="32%">
+      <img src="images/sec1_rubegoldberg.jpeg" width="32%">
+  </div>
+  
+  <div class="flex-item-4"><p><b>4. Image center</b> In this example, the image is centered within a sub-container (div) inside a div.</p>
+
+  <div class="sub-container"><img src="images/taupe.gif"></div></p>
+  </div>
+
+  <div class="flex-container">
+  <div class="flex-item-5"><p><b>5. Desktop: 70%.</b> Text with Images 2-Up. In this example, we change the percentage of flex to create different layouts for different screen sizes.</p>
+
+    <img src="images/sec1_rubegoldberg-landscape.jpeg" width="100%">
+
+  </div>
+  
+  <div class="flex-item-6"><p><b>6. Desktop 30%.</b> The negative space can highlight the positive space. Rather than fill the page, let the words breathe!</p>
+
+  <div class="sub-container">
+
+    <svg width="400" height="300">
+  <mask id="svgmask3">
+    <circle fill="#ffffff" cx="500" cy="50" r="50"></circle>
+    <circle fill="#ffffff" cx="100" cy="50" r="50"></circle>
+    <circle fill="#ffffff" cx="300" cy="150" r="150"></circle>
+  </mask>
+  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/ramon-tejada.jpg" mask="url(#svgmask3)"></image>
+</svg>
+
+</div><h1>“Leave space to fill in later.” —Ramon Tejada</h1></p>
+  </div>
+
+<footer>
+  <div class="navigation-div">
+  <p>References: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="one">CSS Tricks: A Guide to Flexbox</a> <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">CSS Smooth Scroll.</a> <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_element">CSS Position: Sticky</p></a></div>
+</footer>
+
+</body>
+</html>
+
